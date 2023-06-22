@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <body>
+    {% include 'navber.html' %}
+    <h1 Class="text-center"> booking list</h1>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-2 col-md-8">
+        <div class="text-right">
+          <a href="#"></a>
+
+        </div>
+        {% if abc %}
+        <table Class="table tables-border text-center">
+          <thead class="bg-success text-white">
+            <tr>
+              <th>name</th>
+              <th>from_to</th>
+              <th>froms</th>
+              <th>date</th>
+              <th>number</th>
+            </tr>
+            </thead>
+            <tbody class="bg-primary text-white">
+              {% for i in abc %}
+              <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.from_to}}</td>
+                <td>{{i.froms}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.number}}</td>
+              </tr>
+              {% endfor%}
+            </tbody>
+        </table>
+        {% else %}
+        <h2 class="text-center"> travel booking not available </h2>
+        {% endif %}
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
